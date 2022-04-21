@@ -10,9 +10,8 @@ app.use(express.static('public'))
 
  
 app.get('/', function (req, res) {
-	console.log(path.join(__dirname, '/public/', 'index.html'));
 	res.set('Content-Type', 'text/html');
-    res.sendFile(path.join(__dirname, '/public/', 'index.html'));
+    res.sendFile(path.join(__dirname, '/', 'index.html'));
 })
 
 app.put('/api/upload-photo', upload.any(), function (req, res) {
